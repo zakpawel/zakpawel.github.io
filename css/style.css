@@ -10,12 +10,29 @@
 }
 
 #notation-exercise, #notation-answer {
-	height: 160px !important;
+	height: 250px !important;
 	transform: scale(1.5);
 	transform-origin: 0 0;
 }
 
 #sidebar {
+}
+
+.config {
+	display: table;
+}
+
+.config .cell {
+	padding: 5px;
+}
+
+.clefs {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.range-config {
+	display: table-cell;
 }
 
 .error {
@@ -31,22 +48,45 @@
 	position: relative;
 }
 
+
 .key {
 	display: inline-block;
 	vertical-align: top;
 	box-sizing: border-box;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 
 .key.black {
 	background-color: black;
-	width: 15px;
+	width: 10px;
 	height: 75px;
 	position: absolute;
 }
 
 .key.white {
 	background-color: white;
-	width: 30px;
+	width: 20px;
 	height: 120px;
 	border: 1px solid lightgray;
+}
+
+.selected-clef {
+	font-weight: bold;
+}
+
+.number-field {
+	display: inline-block;
+	padding: 5px 30px;
+	width: 60px;
+	text-align: center;
+	border: 1px solid whitesmoke;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+.number-field:hover {
+	cursor: ew-resize;
 }
